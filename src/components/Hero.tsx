@@ -14,8 +14,9 @@ export default function Hero() {
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
             Recover Your Memories,
-            <br />
-            <span className="text-blue-600">Rebuild Your Life</span>
+            <br/>
+            <span className="text-[#0d3445]">Rebuild Your Life</span>
+
           </h1>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto animate-fade-in-delayed">
             MemoRaid is an innovative platform designed to help individuals with amnesia
