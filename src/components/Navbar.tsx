@@ -27,7 +27,7 @@ export default function Navbar() {
             <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
             <a href="#testimonials" className="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
             <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+            <button className="bg-[#0d3440] text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
               Get Started
             </button>
           </div>
