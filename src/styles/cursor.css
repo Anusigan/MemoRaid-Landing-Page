@@ -1,28 +1,44 @@
-/* Cursor trail animation - Flame */
-.cursor-trail {
+/* Custom brain cursor */
+.custom-cursor {
   width: 50px;
   height: 50px;
-  background: linear-gradient(45deg, rgba(255, 0, 0, 0.8), rgba(255, 165, 0, 0.8));
+  background: url('src/components/icons/brain.svg') no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+/* Cursor trail animation */
+.cursor-trail {
+  width: 40px;
+  height: 40px;
+  background: rgba(13, 52, 69, 0.15); /* Light teal glow effect */
+  border: 2px solid rgba(13, 52, 69, 0.5); /* Darker teal border */
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 9998;
   transform: translate(-50%, -50%);
-  animation: flameTrail 1.5s ease-out forwards;
+  animation: memoryTrail 1.5s ease-out forwards;
 }
 
-/* Keyframe for flame effect */
-@keyframes flameTrail {
+/* Keyframe for trail effect */
+@keyframes memoryTrail {
   0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(0.6);
+    border-color: rgba(13, 52, 69, 0.15);
   }
   50% {
-    opacity: 0.6;
-    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.2);
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(2);
+    transform: translate(-50%, -50%) scale(1.8);
+    border-color: transparent;
   }
 }
