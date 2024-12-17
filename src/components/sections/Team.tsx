@@ -18,7 +18,7 @@ const team = [
   {
     name: 'Shahinya Arumugam',
     role: 'Co-Founder',
-    image: 'public/icons/Shahinya.jpeg',
+    image: '/icons/Shahinya.jpeg',
     linkedin: 'https://www.linkedin.com/in/shahinya/',
   },
   {
