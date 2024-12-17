@@ -21,7 +21,7 @@ export default function About() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
             >
-              <h2 className="text-4xl font-bold text-[#0d3445] mb-6">About MemoRaid</h2>
+              <h2 className="text-3xl font-bold text-[#0d3445] mb-6">About MemoRaid</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 MemoRaid is an innovative platform currently under development, dedicated to helping individuals recover from amnesia
                 with state-of-the-art cognitive rehabilitation techniques and personalized support systems.
@@ -43,13 +43,18 @@ export default function About() {
                   <motion.div
                       key={index}
                       className="flex flex-col items-center bg-[#0d3445]/5 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
-                      initial={{ scale: 0.8 }}
-                      animate={{ scale: 1 }}
-                      transition={{ duration: 0.5, delay: 0.5 }}
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{
+                        duration: 0.8,
+                        delay: index * 0.3, // Delay for each stat to appear sequentially
+                        type: 'spring',
+                        stiffness: 100, // Bounce effect
+                      }}
                   >
-                    <item.icon className="w-12 h-12 text-[#0d3445] mb-4" /> {/* Add Icon */}
-                    <div className="text-3xl font-bold text-[#0d3445] mb-2">{item.number}</div>
-                    <p className="text-gray-600 text-center">{item.text}</p>
+                    <item.icon className="w-8 h-8 text-[#0d3445] mb-3" /> {/* Reduced Icon Size */}
+                    <div className="text-2xl font-bold text-[#0d3445] mb-2">{item.number}</div> {/* Reduced Number Text Size */}
+                    <p className="text-sm text-gray-600 text-center">{item.text}</p> {/* Reduced Text Size */}
                   </motion.div>
               ))}
             </motion.div>
