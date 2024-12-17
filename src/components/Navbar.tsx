@@ -19,7 +19,7 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-16">
             {/* Updated Logo */}
             <div className="flex items-center space-x-2">
-              <img src="src/components/icons/logonobg.pngogo.png" alt="Logo" className="h-10 w-10 object-contain" />
+              <img src="src/components/icons/logonobg.png" alt="Logo" className="h-12 w-12 object-contain" />
               <span className="font-bold text-xl text-gray-900">MemoRaid</span>
             </div>
 
