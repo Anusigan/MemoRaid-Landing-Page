@@ -31,12 +31,14 @@ export default function MobileApp() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
+            <div
+                className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
             <img
-              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=600"
-              alt="Mobile App Preview"
-              className="relative rounded-3xl shadow-2xl"
+                src="src/components/icons/mr2.jpeg"
+                alt="Mobile App Preview"
+                className="w-35 h-35 relative rounded-3xl shadow-2xl"
             />
+
           </div>
         </div>
       </div>

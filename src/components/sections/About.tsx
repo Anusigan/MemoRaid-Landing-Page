@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Target, Users, Briefcase, Clock } from 'lucide-react'; // Import icons
 import { motion } from 'framer-motion'; // For adding animations
 
 export default function About() {
+  const [scrolling, setScrolling] = useState(false); // State to track scroll position
+
   const stats = [
     { icon: Target, number: 'Coming Soon', text: 'Innovative Tools in Development' },
     { icon: Users, number: 'Join Our Waitlist', text: 'Thousands Awaiting Release' },
@@ -10,8 +12,30 @@ export default function About() {
     { icon: Clock, number: '24/7', text: 'Support on Launch' },
   ];
 
+  // Track scroll position to change background visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Adjust this threshold as needed
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-      <section id="about" className="py-20 bg-white">
+      <section
+          id="about"
+          className={`py-20 bg-white ${scrolling ? 'bg-opacity-0' : 'bg-opacity-100'}`} // Background opacity change
+          style={{
+            backgroundImage: `url('/path/to/your/image.jpg')`, // Background image
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Section */}
