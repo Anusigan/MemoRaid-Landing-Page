@@ -59,13 +59,13 @@ export default function Hero() {
               <div className="flex justify-center space-x-4 animate-fade-in-delayed">
                 <Button
                     variant="primary"
-                    className="bg-white text-[#0D3445] hover:bg-gray-100"
+                    className="bg-white text-[#000000] hover:bg-gray-100"
                 >
                   Start Your Journey
                 </Button>
                 <Button
                     variant="secondary"
-                    className="bg-white text-[#0d3445] hover:bg-gray-100"
+                    className="bg-white text-[#000000] hover:bg-gray-100"
                 >
                   Learn More
                 </Button>
