@@ -46,7 +46,7 @@ export default function Hero() {
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
                 Recover Your Memories,
                 <br />
-                <span className="text-[white]">Rebuild Your Life</span>
+                <span className="text-[#fffff]">Rebuild Your Life</span>
               </h1>
 
               {/* Subtitle */}
@@ -59,13 +59,13 @@ export default function Hero() {
               <div className="flex justify-center space-x-4 animate-fade-in-delayed">
                 <Button
                     variant="primary"
-                    className="bg-white text-[#000000] hover:bg-gray-100"
+                    className="bg-white text-[#0D3445] hover:bg-gray-100"
                 >
                   Start Your Journey
                 </Button>
                 <Button
                     variant="secondary"
-                    className="bg-white text-[#000000] hover:bg-gray-100"
+                    className="bg-white text-[#0d3445] hover:bg-gray-100"
                 >
                   Learn More
                 </Button>
