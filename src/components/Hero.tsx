@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icons } from './icons';
+import { Icons } from '../../public/icons';
 import { Button } from './ui/Button';
 
 export default function Hero() {
