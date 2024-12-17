@@ -20,7 +20,7 @@ export default function Navbar() {
             {/* Updated Logo */}
             <div className="flex items-center space-x-2">
               <img src="/icons/logonobg.png" alt="Logo" className="h-12 w-12 object-contain" />
-              <span className="font-bold text-xl text-gray-900">MemoRaid</span>
+              <span className="font-bold text-xl text-gray-600">MemoRaid</span>
             </div>
 
             {/* Navigation Links */}
