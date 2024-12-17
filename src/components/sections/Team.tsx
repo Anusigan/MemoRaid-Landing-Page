@@ -1,44 +1,44 @@
 import React from 'react';
-import { FaLinkedin } from 'react-icons/fa'; // Import LinkedIn icon
-import { motion } from 'framer-motion'; // For adding animations
+import { FaLinkedin } from 'react-icons/fa'; // LinkedIn icon
+import { motion } from 'framer-motion'; // For animations
 
 const team = [
   {
     name: 'Anusigan Sivananthan',
     role: 'Co-Founder',
     image: 'src/components/icons/Anusigan.jpeg',
-    linkedin: 'https://www.linkedin.com/in/anusigan', // LinkedIn link
+    linkedin: 'https://www.linkedin.com/in/anusigan/',
   },
   {
     name: 'Linushankaran Janarththanan',
     role: 'Co-Founder',
     image: 'src/components/icons/Linu.jpeg',
-    linkedin: 'https://www.linkedin.com/in/linu', // LinkedIn link
+    linkedin: 'https://www.linkedin.com/in/linu/',
   },
   {
     name: 'Shahinya Arumugam',
     role: 'Co-Founder',
     image: 'src/components/icons/Shahinya.jpeg',
-    linkedin: 'https://www.linkedin.com/in/shahinya', // LinkedIn link
+    linkedin: 'https://www.linkedin.com/in/shahinya/',
   },
   {
-    name: 'Avinesh Harishan',
+    name: 'Avinesh Harishann',
     role: 'Co-Founder',
     image: 'src/components/icons/Avinesh.jpeg',
-    linkedin: 'https://www.linkedin.com/in/avinesh', // LinkedIn link
+    linkedin: 'https://www.linkedin.com/in/avinesh/',
   },
   {
     name: 'Rishaanth Rajkumar',
     role: 'Co-Founder',
     image: 'src/components/icons/Rishaanth.jpeg',
-    linkedin: 'https://www.linkedin.com/in/rishaanth', // LinkedIn link
+    linkedin: 'https://www.linkedin.com/in/rishaanth/',
   },
   {
     name: 'Mithunan Jayamohan',
     role: 'Co-Founder',
     image: 'src/components/icons/Mithunan.jpeg',
-    linkedin: 'https://www.linkedin.com/in/mithunan', // LinkedIn link
-  }
+    linkedin: 'https://www.linkedin.com/in/mithunan/',
+  },
 ];
 
 export default function Team() {
@@ -56,9 +56,12 @@ export default function Team() {
             {team.map((member, index) => (
                 <motion.div
                     key={index}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 group relative"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 relative group"
+                    whileHover={{
+                      scale: 1.05, // Slightly scale up the card
+                      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)', // Strong shadow effect
+                    }}
+                    transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <img
                       src={member.image}
@@ -66,24 +69,36 @@ export default function Team() {
                       className="w-full h-64 object-cover"
                   />
                   <div className="p-3">
-                    <h3 className="font-semibold text-xl text-primary mb-2">{member.name}</h3>
+                    <h3 className="font-semibold text-xl text-primary mb-4">{member.name}</h3>
                     <p className="text-accent mb-3">{member.role}</p>
-                  </div>
 
-                  {/* LinkedIn Handle and Icon (hidden by default) */}
-                  <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                    <motion.a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-white text-lg font-semibold"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
+                    {/* LinkedIn icon with gradient animation on hover */}
+                    <motion.div
+                        className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-0 group-hover:scale-100"
+                        style={{
+                          background: 'linear-gradient(135deg, #0d3445, #006a76)',
+                          borderRadius: '50%',
+                          padding: '10px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          width: '50px',
+                          height: '50px',
+                        }}
+                        whileHover={{
+                          scale: 1.2, // Slight zoom effect on LinkedIn icon
+                          rotate: 360, // Rotate on hover
+                        }}
                     >
-                      <FaLinkedin className="text-2xl" /> {/* LinkedIn Icon */}
-                      <span>LinkedIn Profile</span>
-                    </motion.a>
+                      <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white"
+                      >
+                        <FaLinkedin className="text-2xl" />
+                      </a>
+                    </motion.div>
                   </div>
                 </motion.div>
             ))}
