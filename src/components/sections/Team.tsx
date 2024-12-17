@@ -12,7 +12,7 @@ const team = [
   {
     name: 'Linushankaran Janarththanan',
     role: 'Co-Founder',
-    image: 'public/icons/Linu.jpeg',
+    image: '/icons/Linu.jpeg',
     linkedin: 'https://www.linkedin.com/in/linu/',
   },
   {
