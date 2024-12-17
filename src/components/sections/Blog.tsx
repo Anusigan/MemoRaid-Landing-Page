@@ -8,7 +8,7 @@ const instagramPosts = [
     comments: '125',
     timeAgo: '2d',
     tags: ['#MemoryScience', '#Healthcare', '#Innovation'],
-    image: 'src/components/icons/mr2.jpeg' // Image for the first post
+    image: 'public/icons/mr2.jpeg' // Image for the first post
   },
   {
     caption: 'Meet our dedicated team of researchers working to advance cognitive health! 👩‍⚕️👨‍🔬 #Research',
@@ -16,7 +16,7 @@ const instagramPosts = [
     comments: '156',
     timeAgo: '4d',
     tags: ['#ScienceTeam', '#Research', '#BrainHealth'],
-    image: 'src/components/icons/mr1.jpeg' // Image for the second post
+    image: 'public/icons/mr1.jpeg' // Image for the second post
   },
   {
     caption: 'Exciting developments in our labs! Stay tuned for our upcoming breakthroughs 🔬 #Science',
@@ -24,7 +24,7 @@ const instagramPosts = [
     comments: '98',
     timeAgo: '5d',
     tags: ['#Innovation', '#MemoryScience', '#Future'],
-    image: 'src/components/icons/teampic.jpeg' // Image for the third post
+    image: 'public/icons/teampic.jpeg' // Image for the third post
   }
 ];
 

@@ -12,31 +12,31 @@ const team = [
   {
     name: 'Linushankaran Janarththanan',
     role: 'Co-Founder',
-    image: 'src/components/icons/Linu.jpeg',
+    image: 'public/icons/Linu.jpeg',
     linkedin: 'https://www.linkedin.com/in/linu/',
   },
   {
     name: 'Shahinya Arumugam',
     role: 'Co-Founder',
-    image: 'src/components/icons/Shahinya.jpeg',
+    image: 'public/icons/Shahinya.jpeg',
     linkedin: 'https://www.linkedin.com/in/shahinya/',
   },
   {
     name: 'Avinesh Harishann',
     role: 'Co-Founder',
-    image: 'src/components/icons/Avinesh.jpeg',
+    image: 'public/icons/Avinesh.jpeg',
     linkedin: 'https://www.linkedin.com/in/avinesh/',
   },
   {
     name: 'Rishaanth Rajkumar',
     role: 'Co-Founder',
-    image: 'src/components/icons/Rishaanth.jpeg',
+    image: 'public/icons/Rishaanth.jpeg',
     linkedin: 'https://www.linkedin.com/in/rishaanth/',
   },
   {
     name: 'Mithunan Jayamohan',
     role: 'Co-Founder',
-    image: 'src/components/icons/Mithunan.jpeg',
+    image: 'public/icons/Mithunan.jpeg',
     linkedin: 'https://www.linkedin.com/in/mithunan/',
   },
 ];
