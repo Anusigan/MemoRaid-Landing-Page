@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icons } from '../icons';
+import { Icons } from '../../../public/icons';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary';

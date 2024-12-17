@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icons } from '../icons';
+import { Icons } from '../../../public/icons';
 
 export default function MobileApp() {
   return (
@@ -34,7 +34,7 @@ export default function MobileApp() {
             <div
                 className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
             <img
-                src="src/components/icons/mr2.jpeg"
+                src="../../../public/icons/mr2.jpeg"
                 alt="Mobile App Preview"
                 className="w-35 h-35 relative rounded-3xl shadow-2xl"
             />
