@@ -22,7 +22,7 @@ const team = [
     linkedin: 'https://www.linkedin.com/in/shahinya/',
   },
   {
-    name: 'Avinesh Harishann',
+    name: 'F.J.Harishan Avinesh ',
     role: 'Co-Founder',
     image: 'public/icons/Avinesh.jpeg',
     linkedin: 'https://www.linkedin.com/in/avinesh/',
