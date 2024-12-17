@@ -20,7 +20,7 @@ const team = [
 
   },
   {
-    name: 'Avinesh   Harishann',
+    name: 'Avinesh  Harishan',
     role: 'Co-Founder',
     image: 'src/components/icons/Avinesh.jpeg',
 
