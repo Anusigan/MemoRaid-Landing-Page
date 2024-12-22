@@ -56,9 +56,9 @@ export default function Team() {
             {team.map((member, index) => (
                 <motion.div
                     key={index}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 relative group"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-200 relative group border-2 border-[#0d3445]"
                     whileHover={{
-                      scale: 1.05, // Slightly scale up the card
+                      scale: 1.10, // Slightly scale up the card
                       boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)', // Strong shadow effect
                     }}
                     transition={{ type: 'spring', stiffness: 300 }}
@@ -74,7 +74,7 @@ export default function Team() {
 
                     {/* LinkedIn icon with gradient animation on hover */}
                     <motion.div
-                        className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-0 group-hover:scale-100"
+                        className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-150 transform scale-0 group-hover:scale-100"
                         style={{
                           background: 'linear-gradient(135deg, #0d3445, #006a76)',
                           borderRadius: '50%',
