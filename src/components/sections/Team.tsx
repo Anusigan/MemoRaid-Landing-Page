@@ -13,7 +13,7 @@ const team = [
     name: 'Linushankaran Janarththanan',
     role: 'Co-Founder',
     image: '/icons/Linu.jpeg',
-    linkedin: 'https://www.linkedin.com/in/linu/',
+    linkedin: 'https://www.linkedin.com/in/linushankaran-janarththanan-614456293/',
   },
   {
     name: 'Shahinya Arumugam',
