@@ -37,7 +37,7 @@ const team = [
     name: 'Mithunan Jayamohan',
     role: 'Co-Founder',
     image: '/icons/Mithunan.jpeg',
-    linkedin: 'https://www.linkedin.com/in/mithunan/',
+    linkedin: 'https://www.linkedin.com/in/mithunan-jeyamohan-26566328a/',
   },
 ];
 
