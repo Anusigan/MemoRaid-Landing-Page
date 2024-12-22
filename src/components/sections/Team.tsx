@@ -7,7 +7,7 @@ const team = [
     name: 'Anusigan Sivananthan',
     role: 'Co-Founder',
     image: '/icons/Anusigan.jpeg',
-    linkedin: 'https://www.linkedin.com/in/anusigan/',
+    linkedin: 'https://www.linkedin.com/in/anusigan-sivananthan-b3a0b1264/',
   },
   {
     name: 'Linushankaran Janarththanan',
