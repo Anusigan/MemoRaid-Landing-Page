@@ -19,7 +19,7 @@ const team = [
     name: 'Shahinya Arumugam',
     role: 'Co-Founder',
     image: '/icons/Shahinya.jpeg',
-    linkedin: 'https://www.linkedin.com/in/shahinya/',
+    linkedin: 'https://www.linkedin.com/in/shahinya-arumugam-620921295/',
   },
   {
     name: 'F.J.Harishan Avinesh ',
