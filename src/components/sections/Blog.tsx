@@ -41,7 +41,9 @@ export default function InstagramFeed() {
               Stay connected with our latest updates and breakthroughs on Instagram
             </p>
             <a
-                href="#"
+                href="https://www.instagram.com/memoraid.app"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-4 text-[#0d3445] font-medium hover:text-[#0d3445]/80 transition-colors"
             >
               @memoraid.app
@@ -52,11 +54,11 @@ export default function InstagramFeed() {
             {instagramPosts.map((post, index) => (
                 <article
                     key={index}
-                    className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                    className="bg-white border border-gray-200 rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-lg"
                 >
-                  <div className="aspect-square w-full bg-gray-100 relative">
+                  <div className="aspect-square w-full bg-gray-100 relative overflow-hidden">
                     <img
-                        src={post.image} // Dynamically set the image source
+                        src={post.image}
                         alt="Instagram post"
                         className="w-full h-full object-cover"
                     />
@@ -92,7 +94,9 @@ export default function InstagramFeed() {
 
           <div className="text-center mt-10">
             <a
-                href="#"
+                href="https://www.instagram.com/memoraid.app"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#0d3445] text-white rounded-lg hover:bg-[#0d3445]/90 transition-colors"
             >
               <Instagram className="w-5 h-5" />
