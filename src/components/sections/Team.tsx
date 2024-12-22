@@ -25,7 +25,7 @@ const team = [
     name: 'F.J.Harishan Avinesh ',
     role: 'Co-Founder',
     image: '/icons/Avinesh.jpeg',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/harishan-avinesh-733b40299/',
   },
   {
     name: 'Rishaanth Rajkumar',
