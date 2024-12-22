@@ -3,7 +3,7 @@ import React from 'react';
 const plans = [
   {
     name: "Basic",
-    price: "$9.99/mo",
+    price: "Free Plan",
     description: "Perfect for individuals getting started.",
     features: [
       "Core features access",
@@ -15,7 +15,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "$19.99/mo",
+    price: "$6.99/mo",
     description: "Ideal for professionals and small teams.",
     features: [
       "Everything in Basic",
@@ -90,8 +90,8 @@ export default function SubscriptionPlans() {
                     <button
                         className={`w-full px-4 py-2 rounded-full font-semibold text-white ${
                             plan.buttonDisabled
-                                ? "bg-gray-400 cursor-not-allowed"
-                                : "bg-[#0d3445] hover:bg-[#092a36]"
+                                ? "bg-[#0d3445] cursor-not-allowed animate-pulse"
+                                : "bg-[#0d3445] hover:bg-[#0d3445]"
                         } transition-colors duration-300`}
                         disabled={plan.buttonDisabled}
                     >
