@@ -31,7 +31,7 @@ const team = [
     name: 'Rishaanth Rajkumar',
     role: 'Co-Founder',
     image: '/icons/Rishaanth.jpeg',
-    linkedin: 'https://www.linkedin.com/in/rishaanth/',
+    linkedin: 'https://www.linkedin.com/in/rishaanth-rajkumar/',
   },
   {
     name: 'Mithunan Jayamohan',
