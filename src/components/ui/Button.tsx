@@ -16,7 +16,7 @@ export function Button({
 }: ButtonProps) {
   const baseStyles = "px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center space-x-2";
   const variants = {
-    primary: "bg-[#0d3445] text-white hover:bg-blue-700",
+    primary: "bg-white text-black hover:bg-blue-700",
     secondary: "border-2 border-[#0d3445] text-[#0d3445] hover:bg-blue-50"
   };
 

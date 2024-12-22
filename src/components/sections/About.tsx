@@ -31,7 +31,7 @@ export default function About() {
           id="about"
           className={`py-20 bg-white ${scrolling ? 'bg-opacity-0' : 'bg-opacity-100'}`} // Background opacity change
           style={{
-            backgroundImage: `url('/path/to/your/image.jpg')`, // Background image
+            backgroundImage: `url('')`, // Background image
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
