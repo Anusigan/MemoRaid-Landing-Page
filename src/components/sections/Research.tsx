@@ -5,7 +5,7 @@ const researchAreas = [
   {
     icon: <Microscope className="w-6 h-6" />,
     title: 'Upcoming Research',
-    description: 'Preparing groundbreaking studies in cognitive enhancement.',
+    description: 'Preparing groundbreaking studies in cognitive enhancement on memory recovery.',
     status: 'Launching 2025'
   },
   {
