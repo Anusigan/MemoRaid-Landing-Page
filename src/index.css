@@ -1,11 +1,11 @@
 @import './styles/cursor.css';
+@import './styles/animations.css'; /* Import the animations file */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Hide scrollbar but allow scrolling */
 html, body {
-
   overflow: scroll; /* Ensure content is scrollable */
 }
 
@@ -19,29 +19,7 @@ body {
   scrollbar-width: none;     /* Firefox */
 }
 
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* Removed duplicate animation definitions that now exist in animations.css */
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
@@ -76,4 +54,14 @@ button {
 
 a {
   cursor: none;
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }

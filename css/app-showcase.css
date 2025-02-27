@@ -1,0 +1,153 @@
+.app-showcase {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    overflow: hidden;
+}
+
+.app-showcase .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.app-showcase .section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.app-showcase .section-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.app-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Phone frame styling */
+.phone-frame {
+    position: relative;
+    width: 280px;
+    height: 580px;
+    background-color: #222;
+    border-radius: 36px;
+    padding: 10px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    perspective: 1000px;
+    transition: transform 0.5s ease;
+}
+
+.phone-frame:hover {
+    transform: rotateY(-15deg) rotateX(5deg);
+}
+
+.phone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 25px;
+    background-color: #222;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: 2;
+}
+
+.phone-home-button {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background-color: #888;
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Screen slider styling */
+.screen-slider {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.app-screen {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.app-screen.active {
+    opacity: 1;
+}
+
+/* Features styling */
+.app-features {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.feature {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    opacity: 0.7;
+    transform: translateX(20px);
+}
+
+.feature.active {
+    opacity: 1;
+    background: linear-gradient(135deg, #4C8BF5 0%, #2D5FC9 100%);
+    color: white;
+    transform: translateX(0);
+    box-shadow: 0 10px 15px rgba(45, 95, 201, 0.3);
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .app-display {
+        flex-direction: column;
+    }
+    
+    .app-features {
+        width: 100%;
+        margin-top: 50px;
+    }
+}

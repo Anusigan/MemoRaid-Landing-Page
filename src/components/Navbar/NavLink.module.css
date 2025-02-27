@@ -1,0 +1,131 @@
+.navLink {
+  position: relative;
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+  color: var(--primary-color, #0d3445);
+  font-weight: 500;
+  font-size: 14px;
+  min-width: 90px;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.linkContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.navLink:hover .linkContent {
+  transform: translateY(-1px);
+}
+
+.navLink.active {
+  color: white;
+}
+
+.iconBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.icon {
+  transition: transform 0.3s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.navLink:hover .icon {
+  transform: scale(1.15);
+}
+
+.iconGlow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0.7;
+  z-index: -1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.linkText {
+  display: inline-block;
+  transition: 
+    transform 0.3s cubic-bezier(0.6, 0.01, 0.05, 0.95),
+    opacity 0.2s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+  white-space: nowrap;
+}
+
+.linkUnderline {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: 
+    width 0.3s cubic-bezier(0.6, 0.01, 0.05, 0.95),
+    left 0.3s cubic-bezier(0.6, 0.01, 0.05, 0.95),
+    opacity 0.2s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+  opacity: 0;
+  border-radius: 2px;
+}
+
+.navLink:hover .linkUnderline {
+  width: 30px;
+  left: calc(50% - 15px);
+  opacity: 0.5;
+}
+
+.activePing {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.pingInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50%;
+  animation: pingAnimation 2s cubic-bezier(0.6, 0.01, 0.05, 0.95) infinite;
+  opacity: 0.5;
+}
+
+@keyframes pingAnimation {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(2); opacity: 0; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+@media (max-width: 1023px) {
+  .navLink {
+    padding: 0 15px;
+    min-width: 70px;
+  }
+}

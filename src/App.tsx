@@ -10,6 +10,7 @@ import Blog from './components/sections/Blog';
 import MobileApp from './components/sections/MobileApp';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import AppShowcase from './components/AppShowcase/AppShowcase';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Blog />
       <Testimonials />
       <MobileApp />
+      <AppShowcase />
       <Footer />
     </div>
   );
