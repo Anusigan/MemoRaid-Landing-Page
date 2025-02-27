@@ -1,14 +1,11 @@
 /* Animation keyframes for the entire application */
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
+   0%, 100% {
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
+    transform: translateY(-20px);
   }
 }
 
@@ -43,7 +40,43 @@
   }
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 /* Animation classes */
 .animate-pulse-gentle {
   animation: pulse-gentle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Cursor animations */
+.scale-150 {
+  transform: translate(-50%, -50%) scale(1.5) !important;
+  transition: transform 0.3s ease;
+}
+
+/* Animation for SVG cursor */
+@keyframes cursorPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cursor-svg circle {
+  transition: all 0.2s ease;
+}
+
+.cursor-svg.active .cursor-ring {
+  animation: cursorPulse 2s infinite;
 }

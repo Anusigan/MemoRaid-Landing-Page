@@ -459,3 +459,68 @@
   0% { transform: translateX(-100%); }
   20%, 100% { transform: translateX(100%); }
 }
+
+/* Store badges */
+.storeBadges {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.storeBadges p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.storeButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #0d3445;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.storeButton:hover {
+  background: #165370;
+}
+
+.storeIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.storeText {
+  text-align: left;
+}
+
+.storeTextSmall {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.storeTextLarge {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.storeBadge {
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.storeBadge:hover {
+  transform: scale(1.05);
+}

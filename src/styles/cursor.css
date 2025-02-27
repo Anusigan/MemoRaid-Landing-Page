@@ -1,44 +1,108 @@
-/* Custom brain cursor */
-.custom-cursor {
-  width: 50px;
-  height: 50px;
-  background: url('../../public/icons/brain.svg') no-repeat center center;
-  background-size: cover;
+/* Hide default cursor on the entire page */
+body, 
+a, button, input, select, textarea, [role="button"] {
+  cursor: none !important;
+}
+
+/* Cursor container styling */
+.cursor-container {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s ease, opacity 0.1s ease;
+  mix-blend-mode: difference;
 }
 
-/* Cursor trail animation */
-.cursor-trail {
-  width: 40px;
-  height: 40px;
-  background: rgba(13, 52, 69, 0.15); /* Light teal glow effect */
-  border: 2px solid rgba(13, 52, 69, 0.5); /* Darker teal border */
+/* Brain cursor styling */
+.brain-cursor {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  filter: invert(1);
+  transition: transform 0.2s ease;
+}
+
+/* Active state (when hovering clickable elements) */
+.cursor-active .brain-cursor {
+  transform: scale(1.2);
+}
+
+/* Cursor dot (optional small dot in the center) */
+.cursor-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  background-color: white;
   border-radius: 50%;
+  opacity: 0.8;
+}
+
+/* Enhanced Trail styling */
+.cursor-trail {
   position: fixed;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
   transform: translate(-50%, -50%);
-  animation: memoryTrail 1.5s ease-out forwards;
+  animation: trail-bubble 1.2s forwards;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
-/* Keyframe for trail effect */
-@keyframes memoryTrail {
+@keyframes trail-fade {
   0% {
     opacity: 0.7;
-    transform: translate(-50%, -50%) scale(0.6);
-    border-color: rgba(13, 52, 69, 0.15);
-  }
-  50% {
-    opacity: 0.4;
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1);
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(1.8);
-    border-color: transparent;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+}
+
+/* New bubble animation */
+@keyframes trail-bubble {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) translate(0, -10px) scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translate(0, -20px) scale(0.2);
+  }
+}
+
+/* Subtle pulse animation for the brain cursor when active */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 3px rgba(13, 52, 69, 0.7));
+  }
+}
+
+/* Mobile devices - hide custom cursor */
+@media (max-width: 768px) {
+  .cursor-container, .cursor-trail {
+    display: none;
+  }
+  
+  html, body {
+    cursor: auto !important;
   }
 }

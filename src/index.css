@@ -1,67 +1,120 @@
-@import './styles/cursor.css';
-@import './styles/animations.css'; /* Import the animations file */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Hide scrollbar but allow scrolling */
-html, body {
-  overflow: scroll; /* Ensure content is scrollable */
+/* Then import other CSS files */
+@import './styles/cursor.css';
+@import './styles/animations.css'; /* Import the animations file */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    cursor: none;
+  }
+  
+  body {
+    @apply transition-colors duration-300;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+  
+  /* Dark mode transitions */
+  .dark body {
+    @apply bg-dark text-dark-primary;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
+  .dark ::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#0d3445]/50 rounded-full;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-[#0d3445]/70;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#0d3445]/70;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#0d3445]/90;
+  }
+  
+  /* Links and buttons */
+  a, button {
+    cursor: none;
+  }
+  
+  button {
+    @apply transition-all duration-300;
+  }
 }
 
-::-webkit-scrollbar {
-  width: 0;  /* Hide the vertical scrollbar */
-  height: 0; /* Hide the horizontal scrollbar */
+@layer components {
+  /* Define component styles */
+  .section-bg-light {
+    @apply bg-white;
+  }
+  
+  .dark .section-bg-light {
+    @apply bg-dark-card;
+  }
+  
+  .card {
+    @apply bg-white border-gray-200;
+  }
+  
+  .dark .card {
+    @apply bg-dark-card border-dark-border;
+  }
+  
+  .card-highlight {
+    @apply border-[#0d3445]/30;
+  }
+  
+  .dark .card-highlight {
+    @apply border-[#0d3445]/50;
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
 }
 
-body {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;     /* Firefox */
-}
-
-/* Removed duplicate animation definitions that now exist in animations.css */
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-fade-in {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-.animate-fade-in-delayed {
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.5s;
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-  cursor: none;
-}
-
-/* Custom styles for better typography */
-h1, h2, h3, h4, h5, h6 {
-  @apply tracking-tight;
-}
-
-/* Improved button hover effects */
-button {
-  @apply transition-all duration-300;
-  cursor: none;
-}
-
-a {
-  cursor: none;
-}
-
-.backdrop-blur-md {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.backdrop-blur-sm {
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+@layer utilities {
+  /* Animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .animate-fade-in-delayed {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
 }
