@@ -106,3 +106,95 @@ a, button, input, select, textarea, [role="button"] {
     cursor: auto !important;
   }
 }
+
+/* Custom cursor styles - single brain cursor */
+.cursor-wrapper {
+  pointer-events: none !important;
+  position: fixed;
+  z-index: 999999;
+  transform: translate(-50%, -50%);
+  width: 45px;  /* Increased size from 30px */
+  height: 45px; /* Increased size from 30px */
+  background-color: transparent;
+  transition: transform 0.2s ease;
+  /* Brain SVG background */
+  background-image: url('/icons/brain.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%; /* Increased from 60% to fill the cursor area */
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+/* Cursor bubble trail effect - Increased bubble size */
+.cursor-bubble {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  background-color: #0d3445; /* Brand color for the bubbles */
+  opacity: 0.7;
+  z-index: 999990;
+  transform: translate(-50%, -50%);
+  width: 20px; /* Increased from 10px - now ~45% of cursor size */
+  height: 20px; /* Increased from 10px - now ~45% of cursor size */
+  animation: bubble-float 1.8s forwards ease-out;
+}
+
+@keyframes bubble-float {
+  0% {
+    opacity: 0.8;
+    width: 25px; /* Increased starting size */
+    height: 25px; /* Increased starting size */
+    box-shadow: 0 0 12px rgba(13, 52, 69, 0.6);
+  }
+  50% {
+    opacity: 0.6;
+    width: 22px; /* Keep bubbles relatively large through animation */
+    height: 22px; /* Keep bubbles relatively large through animation */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-35px) scale(0.6);
+    opacity: 0;
+    width: 18px; /* Ending size still substantial */
+    height: 18px; /* Ending size still substantial */
+  }
+}
+
+/* Fix for framer-motion elements */
+.framer-cursor-target {
+  cursor: none !important;
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-wrapper, .cursor-bubble {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Ensure cursor stays visible on page */
+html, body {
+  overflow-x: hidden;
+  min-height: 100%;
+  position: relative;
+  cursor: none !important;
+}
+
+/* Add pulse animation to the cursor */
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.15); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.cursor-wrapper {
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+.cursor-scale {
+  animation: none;
+}
+
