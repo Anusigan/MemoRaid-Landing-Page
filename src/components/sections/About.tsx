@@ -150,14 +150,14 @@ const About = () => {
             >
               <motion.h2 
                 variants={itemVariants}
-                className="text-5xl font-bold text-[#0d3445] dark:text-white mb-8 relative"
+                className="text-5xl font-bold text-[#FFFFFF] dark:text-white mb-8 relative"
               >
                 About MemoRaid
                 <motion.span 
                   initial={{ width: 0 }}
                   animate={{ width: "80px" }}
                   transition={{ delay: 0.8, duration: 0.6 }}
-                  className="absolute -bottom-3 left-0 h-1.5 bg-[#0d3445] dark:bg-white"
+                  className="absolute -bottom-3 left-0 h-1.5 bg-[#FFFFFF] dark:bg-white"
                 ></motion.span>
               </motion.h2>
               
@@ -184,7 +184,7 @@ const About = () => {
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-8 py-3 bg-[#0d3445] dark:bg-[#0d3445]/80 text-white rounded-full font-medium transition-all
+                  className="px-8 py-3 bg-[#FFFFFF] dark:bg-[#FFFFF]/80 text-[#0d3445] rounded-full font-medium transition-all
                             shadow-lg shadow-[#0d3445]/20 hover:shadow-xl hover:shadow-[#0d3445]/30"
                 >
                   Learn More
@@ -197,8 +197,8 @@ const About = () => {
               {/* Background decorative elements */}
               <div className="absolute inset-0 overflow-hidden">
                 <motion.div 
-                  className="absolute top-1/4 right-1/4 w-32 h-32 rounded-full border border-[#0d3445]/20 dark:border-white/20"
-                  animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.2, 0.5] }}
+                  className="absolute top-1/4 right-1/4 w-32 h-42 rounded-full border border-[#FFFFFF]/20 dark:border-white/40"
+                  animate={{ scale: [1, 1.1, 1], opacity: [2.5, 0.2, 0.5] }}
                   transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                 ></motion.div>
               </div>
@@ -229,20 +229,20 @@ const About = () => {
                     className={`relative transform-gpu ${index % 2 === 0 ? 'md:-mt-0' : 'md:mt-8'}`}
                   >
                     {/* Glowing shadow underneath */}
-                    <div className="absolute -bottom-4 inset-x-4 h-12 bg-[#0d3445]/20 blur-xl rounded-full"></div>
+                    <div className="absolute -bottom-4 inset-x-4 h-12 bg-[#FFFFFF]/20 blur-xl rounded-full"></div>
                     
                     {/* Card with glass effect */}
                     <div className={`w-full aspect-[4/3] rounded-2xl overflow-hidden relative backdrop-blur-sm
                                   bg-gradient-to-br ${item.gradient}
-                                  shadow-lg shadow-[#0d3445]/20 group`}>
+                                  shadow-lg shadow-[#FFFFFF]/20 group`}>
                       
                       {/* Animated border effect */}
                       <div className="absolute inset-0 rounded-xl border border-white/30 overflow-hidden">
                         <motion.div 
-                          className="absolute inset-0 opacity-30"
+                          className="absolute inset-0 opacity-70"
                           animate={{
                             background: [
-                              'linear-gradient(90deg, transparent 0%, white 50%, transparent 100%)',
+                              'linear-gradient(90deg, transparent 0%, white 70%, transparent 100%)',
                               'linear-gradient(90deg, transparent 100%, white 100%, transparent 100%)'
                             ],
                             left: ['-100%', '100%']
@@ -255,9 +255,9 @@ const About = () => {
                         />
                       </div>
                       
-                      <div className="absolute inset-0.5 rounded-xl bg-gradient-to-br from-[#0d3445]/90 to-[#0d3445] backdrop-blur-md p-6 flex flex-col items-center justify-center">
+                      <div className="absolute inset-0.5 rounded-xl bg-gradient-to-br from-[#0d3445]/90 to-[#0d3445] backdrop-blur-md p-6 flex flex-col items-center justify-center border border-white">
                         {/* Animated particles */}
-                        <div className="absolute inset-0 overflow-hidden opacity-30">
+                        <div className="absolute inset-0 overflow-hidden opacity-90">
                           {[...Array(3)].map((_, i) => (
                             <motion.div
                               key={i}
