@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from './AppShowcase.module.css';
-import ParticlesBackground from './ParticlesBackground';
 import { 
   Brain, 
   BarChart2, 
@@ -8,7 +7,6 @@ import {
   Users,
   ChevronRight
 } from 'lucide-react';
-import { FaAppStore, FaGooglePlay } from 'react-icons/fa'; // Add this import
 
 // App screens data with enhanced descriptions
 const appScreens = [
@@ -162,18 +160,7 @@ const AppShowcase = () => {
 
   return (
     <section className={styles.appShowcase} id="app-showcase" ref={sectionRef}>
-      {/* Animated background elements */}
-      <div className={styles.orbitContainer}>
-        <div className={`${styles.orbit} ${styles.orbit1}`}></div>
-        <div className={`${styles.orbit} ${styles.orbit2}`}></div>
-        <div className={`${styles.orbit} ${styles.orbit3}`}></div>
-        <div className={`${styles.glow} ${styles.glow1}`}></div>
-        <div className={`${styles.glow} ${styles.glow2}`}></div>
-      </div>
-      
-      <div className={styles.particlesContainer}>
-        <ParticlesBackground />
-      </div>
+      {/* Remove the background container - now using global background */}
       
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
@@ -244,28 +231,7 @@ const AppShowcase = () => {
             ))}
           </div>
           
-          {/* Replace the existing store badges section with this */}
-          <div className={styles.storeBadges}>
-            <div className={styles.badges}>
-              {/* App Store Button */}
-              <button className={styles.storeButton}>
-                <FaAppStore className={styles.storeIcon} />
-                <div className={styles.storeText}>
-                  <div className={styles.storeTextSmall}>Coming soon on</div>
-                  <div className={styles.storeTextLarge}>App Store</div>
-                </div>
-              </button>
-
-              {/* Google Play Button */}
-              <button className={styles.storeButton}>
-                <FaGooglePlay className={styles.storeIcon} />
-                <div className={styles.storeText}>
-                  <div className={styles.storeTextSmall}>Coming soon on</div>
-                  <div className={styles.storeTextLarge}>Google Play</div>
-                </div>
-              </button>
-            </div>
-          </div>
+          {/* Store badges section removed from here */}
         </div>
       </div>
     </section>

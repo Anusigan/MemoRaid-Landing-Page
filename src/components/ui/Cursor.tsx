@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import '../../styles/cursor.css';
 
 export function Cursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isPointer, setIsPointer] = useState(false);
+  const [setPosition] = useState({ x: 0, y: 0 });
+  const [setIsPointer] = useState(false);
   const cursorRef = useRef<HTMLElement | null>(null);
   const rafRef = useRef<number | null>(null);
   const trailTimerRef = useRef<NodeJS.Timeout | null>(null);

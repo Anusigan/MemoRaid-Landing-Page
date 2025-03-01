@@ -1,0 +1,17 @@
+/* Add these styles to your existing globals.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* Any section-specific backgrounds should be made transparent or removed */
+section, div {
+  background-color: transparent;
+}
+
+/* Only add explicit backgrounds to elements that need them */
+.card, .navbar, .footer, .cta-box {
+  background-color: #ffffff;
+}

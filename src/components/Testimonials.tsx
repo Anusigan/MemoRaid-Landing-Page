@@ -43,7 +43,7 @@ const plans = [
 
 export default function SubscriptionPlans() {
   return (
-      <div id="plans" className="py-20 bg-gray-50">
+      <div id="plans" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Heading */}
           <h2 className="text-4xl font-bold text-center text-[#0d3445] mb-6">

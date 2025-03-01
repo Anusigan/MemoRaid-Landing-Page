@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react"
 import { Target, Users, Briefcase, Clock } from "lucide-react"
 import { motion } from "framer-motion"
+import ParticlesBackground from "../../components/AppShowcase/ParticlesBackground"
+import AppShowcase from "../../components/AppShowcase/AppShowcase"
 
 const About = () => {
   const [scrolling, setScrolling] = useState(false)
@@ -90,8 +92,13 @@ const About = () => {
     <>
       <section
         id="about"
-        className="py-32 relative overflow-hidden bg-transparent"
+        className="py-32 relative overflow-hidden bg-white"
       >
+        {/* Add particles background container */}
+        <div className="absolute inset-0 overflow-hidden z-0 opacity-60">
+          <ParticlesBackground />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
             initial="hidden"
@@ -284,11 +291,14 @@ const About = () => {
         </div>
       </section>
 
+      {/* App Showcase Section */}
+      <AppShowcase />
+
       {/* Achievements Section */}
-      <section className="py-32 bg-gradient-to-b from-transparent to-[#0d3445]/5 dark:to-[#0d3445]/10 relative overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#0d3445]/5 dark:bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#0d3445]/5 dark:bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
+      <section className="py-32 bg-white relative overflow-hidden">
+        {/* Remove particles background for achievements section */}
+        
+        {/* Remove decorative background elements with blue tints */}
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 

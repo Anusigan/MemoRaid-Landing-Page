@@ -43,7 +43,7 @@ const team = [
 
 export default function Team() {
   return (
-      <section id="team" className="py-20 bg-primary/5">
+      <section id="team" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Meet Our Team</h2>

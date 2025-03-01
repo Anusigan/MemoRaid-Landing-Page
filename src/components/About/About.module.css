@@ -1,0 +1,60 @@
+/* ...existing styles... */
+
+/* Store Badges Styles */
+.storeBadges {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.storeButton {
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.storeButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.storeIcon {
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+
+.storeText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.storeTextSmall {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.storeTextLarge {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .badges {
+    flex-direction: column;
+    align-items: center;
+  }
+}
