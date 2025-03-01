@@ -15,3 +15,299 @@ section, div {
 .card, .navbar, .footer, .cta-box {
   background-color: #ffffff;
 }
+
+/* Reset all white backgrounds */
+body, 
+main, 
+section, 
+div[class*="container"], 
+div[class*="wrapper"], 
+div[class*="content"] {
+  background-color: transparent !important;
+}
+
+/* Preserve white backgrounds only where needed */
+.card, 
+.navbar, 
+.modal, 
+.dropdown-menu {
+  background-color: #ffffff;
+}
+
+/* Animated Gradient Background Classes */
+.animatedGradientBg {
+  background: linear-gradient(-45deg, #ffffff, #f5f5f5, #e0f2f7, #0d3445);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #333; /* Default text color for light backgrounds */
+  position: relative;
+  overflow: hidden;
+}
+
+.animatedGradientBgDark {
+  background: linear-gradient(-45deg, #0d3445, #154659, #1a5b72, #072530);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #fff; /* Default text color for dark backgrounds */
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Section overlay patterns */
+.sectionPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  pointer-events: none;
+  background-image: radial-gradient(#0d3445 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Base styles for all sections */
+section {
+  background-color: #f5f5f7 !important; /* Light gray base background for all sections */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Remove any conflicting background colors */
+body, main, div[class*="container"], div[class*="wrapper"], div[class*="content"] {
+  background-color: transparent;
+}
+
+/* Animation for floating particles */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(5deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(10px) rotate(-5deg); }
+}
+
+/* Animation for gradient movement */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animated circle class */
+.animated-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+  animation: float 15s infinite ease-in-out;
+}
+
+/* Color classes for different sections */
+.section-light {
+  background-color: #f5f5f7 !important;
+  color: #333333;
+}
+
+.section-medium {
+  background-color: #e5e5e7 !important; 
+  color: #333333;
+}
+
+.section-dark {
+  background-color: #333333 !important;
+  color: #f5f5f7;
+}
+
+/* Add these specific styles for the About section */
+
+
+@keyframes aboutGradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Fix text colors for the About section to ensure readability */
+#about h2, 
+#about h3, 
+#about .text-[#0d3445] {
+  color: #ffffff !important;
+}
+
+#about p, 
+#about .text-gray-700 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Global section background styles */
+
+/* Base section styles */
+section {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Keep only the blue gradient and apply it to all sections */
+.section-gradient-blue {
+  background: linear-gradient(-45deg, #FFFFFF, #154659, #FFFFFF, #072530) !important;
+  background-size: 400% 400% !important;
+  animation: gradientAnimation 15s ease infinite !important;
+  color: #ffffff !important;
+}
+
+/* Animation keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Overlay patterns for visual interest */
+
+
+.overlay-pattern-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ensure text is readable on dark background */
+section h1, 
+section h2, 
+section h3, 
+section h4, 
+section h5, 
+section h6, 
+section .text-[#0d3445] {
+  color: #ffffff !important;
+}
+
+section p, 
+section .text-gray-700 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Animation for floating particles */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(5deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(10px) rotate(-5deg); }
+}
+
+/* Animated circle class */
+.animated-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+  animation: float 15s infinite ease-in-out;
+}
+
+/* Create a seamless background experience */
+
+/* Apply the main gradient to the body */
+body {
+  background: linear-gradient(-45deg, #0d3445, #154659, #1a5b72, #072530) !important;
+  background-size: 400% 400% !important;
+  animation: gradientAnimation 15s ease infinite !important;
+  color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Make sections transparent with content visible */
+section {
+  background: transparent !important; /* Ensure ALL sections are transparent */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 5rem 0; /* Consistent padding */
+}
+
+/* Create subtle transition overlays between sections */
+section::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Overlap slightly */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1); /* Very subtle divider */
+  z-index: 5;
+}
+
+/* Override any conflicting background settings */
+.section-gradient-blue,
+.section-light,
+.section-medium,
+.section-dark,
+.section-gradient-light,
+.section-gradient-teal,
+.section-gradient-purple,
+.section-gradient-green {
+  background: transparent !important;
+}
+
+/* Ensure text is readable against dark background */
+section h1, 
+section h2, 
+section h3, 
+section h4, 
+section h5, 
+section h6, 
+section .text-[#0d3445] {
+  color: #ffffff !important;
+}
+
+section p, 
+section .text-gray-700 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Animation for gradient */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Preserve white backgrounds only where needed */
+.card, 
+.navbar, 
+.modal, 
+.dropdown-menu {
+  background-color: #ffffff;
+}
+
+
+
+.overlay-pattern-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(238, 1, 1, 0.1), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+}

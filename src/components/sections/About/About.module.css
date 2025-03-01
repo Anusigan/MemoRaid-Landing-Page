@@ -1,26 +1,13 @@
-/* ...existing styles... */
-
-.debugBorder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px dashed yellow;
-  pointer-events: none;
-  opacity: 0.2;
-  z-index: 999;
-}
-
 .about {
-  background: linear-gradient(-45deg, #0d3445, #154659, #1a5b72, #072530) !important;
+  
   background-size: 400% 400% !important;
   animation: aboutGradientAnimation 15s ease infinite !important;
   color: #ffffff !important;
   padding: 5rem 0;
   position: relative;
   overflow: hidden;
-  min-height: 300px; /* Ensure minimum height */
+  min-height: 300px;
+  z-index: 1;
 }
 
 @keyframes aboutGradientAnimation {
@@ -41,6 +28,7 @@
                     rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0.03) 75%, transparent 75%, transparent);
   background-size: 100% 100%, 20px 20px;
   pointer-events: none;
+  z-index: -1;
 }
 
 .container {

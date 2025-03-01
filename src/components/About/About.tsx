@@ -1,17 +1,15 @@
 import React from 'react';
 import styles from './About.module.css';
-import { FaAppStore, FaGooglePlay } from 'react-icons/fa'; // Add this import
+import { FaAppStore, FaGooglePlay } from 'react-icons/fa';
 
 const About = () => {
-  // ...existing code...
-
   return (
-    <section className={styles.about} id="about">
+    <section id="about" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.aboutContent}>
           {/* ...existing about content... */}
           
-          {/* Store Badges Section - Added from AppShowcase */}
+          {/* Store Badges Section */}
           <div className={styles.storeBadges}>
             <div className={styles.badges}>
               {/* App Store Button */}

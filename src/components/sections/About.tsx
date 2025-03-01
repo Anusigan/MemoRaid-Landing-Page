@@ -52,6 +52,14 @@ const About = () => {
     }
 
     window.addEventListener("scroll", handleScroll)
+    
+    // Add the section classes
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.classList.remove("bg-white");
+      aboutSection.classList.add("section-gradient-blue", "overlay-pattern-lines");
+    }
+    
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -88,11 +96,40 @@ const About = () => {
     }
   }
 
+  // Add useEffect to apply the dark blue gradient background directly
+  useEffect(() => {
+    // Get the about section element
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      // Remove the white background
+      aboutSection.classList.remove("bg-white");
+      
+      // Apply our dark gradient directly
+      aboutSection.style.background = "linear-gradient(-45deg, #0d3445, #154659, #1a5b72, #072530)";
+      aboutSection.style.backgroundSize = "400% 400%";
+      aboutSection.style.animation = "aboutGradientAnimation 15s ease infinite";
+      
+      // Ensure animation keyframes exist
+      if (!document.getElementById("about-animation-keyframes")) {
+        const style = document.createElement("style");
+        style.id = "about-animation-keyframes";
+        style.textContent = `
+          @keyframes aboutGradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }
+  }, []);
+
   return (
     <>
       <section
         id="about"
-        className="py-32 relative overflow-hidden bg-white"
+        className="py-32 relative overflow-hidden section-gradient-blue overlay-pattern-lines"
       >
         {/* Add particles background container */}
         <div className="absolute inset-0 overflow-hidden z-0 opacity-60">
@@ -291,11 +328,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* App Showcase Section */}
-      <AppShowcase />
+      {/* App Showcase Section - Apply blue gradient to this section too */}
+      <section id="appshowcase" className=".overlay-pattern-glow::before ">
+        <AppShowcase />
+      </section>
 
-      {/* Achievements Section */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      {/* Achievements Section - Also apply blue gradient */}
+      <section id="achievements" className="py-32 relative overflow-hidden section-gradient-blue overlay-pattern-glow">
         {/* Remove particles background for achievements section */}
         
         {/* Remove decorative background elements with blue tints */}

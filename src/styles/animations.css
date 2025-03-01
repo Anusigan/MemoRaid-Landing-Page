@@ -1,12 +1,10 @@
 /* Animation keyframes for the entire application */
 
 @keyframes float {
-   0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(5deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(10px) rotate(-5deg); }
 }
 
 @keyframes fadeIn {
@@ -49,6 +47,31 @@
   }
 }
 
+/* Background Animation Keyframes */
+@keyframes heroGradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes aboutGradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes featuresGradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* Animation classes */
 .animate-pulse-gentle {
   animation: pulse-gentle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -79,4 +102,36 @@
 
 .cursor-svg.active .cursor-ring {
   animation: cursorPulse 2s infinite;
+}
+
+/* Add these styles for snow-like bubble animations */
+
+.snow-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  filter: blur(1px);
+  opacity: 0.2;
+  pointer-events: none;
+  animation: bubble-float linear infinite;
+  z-index: 1;
+  top: -10px;
+}
+
+@keyframes bubble-float {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* Animated circle class */
+.animated-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 0;
+  animation: float 15s infinite ease-in-out;
 }
