@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, Star, Zap, Shield, Award, ArrowRight } from 'lucide-react';
 import styles from './Pricing.module.css';
 
 const SubscriptionPlans = () => {
   const [isAnnual, setIsAnnual] = useState(false);
-  const [isChanging, setIsChanging] = useState(false);
+  const [, setIsChanging] = useState(false);
   
   // Handle toggle change with animation
   const handlePricingToggle = () => {

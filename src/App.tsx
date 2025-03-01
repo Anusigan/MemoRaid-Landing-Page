@@ -7,7 +7,6 @@ import About from './components/sections/About';
 import Team from './components/sections/Team';
 import Research from './components/sections/Research';
 import Blog from './components/sections/Blog';
-import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Pricing from './components/Pricing';
 
