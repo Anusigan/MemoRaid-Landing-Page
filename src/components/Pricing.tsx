@@ -184,7 +184,15 @@ const SubscriptionPlans = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <span className={!isAnnual ? styles.activeType : ''}>Monthly</span>
+            <motion.span 
+              className={!isAnnual ? styles.activeType : ''}
+              animate={{ 
+                color: !isAnnual ? "#0d3445" : "#426a79",
+                fontWeight: !isAnnual ? 700 : 600 
+              }}
+            >
+              Monthly
+            </motion.span>
             <div className={styles.toggleWrapper}>
               <label className={styles.switch}>
                 <input 
@@ -194,12 +202,18 @@ const SubscriptionPlans = () => {
                 />
                 <motion.span 
                   className={styles.slider}
-                  animate={isAnnual ? { opacity: 1 } : { opacity: 0.7 }}
+                  animate={isAnnual ? { opacity: 1 } : { opacity: 0.8 }}
                   transition={{ duration: 0.3 }}
                 ></motion.span>
               </label>
             </div>
-            <span className={isAnnual ? styles.activeType : ''}>
+            <motion.span 
+              className={isAnnual ? styles.activeType : ''}
+              animate={{ 
+                color: isAnnual ? "#0d3445" : "#426a79",
+                fontWeight: isAnnual ? 700 : 600 
+              }}
+            >
               Annually
               {isAnnual && (
                 <motion.div 
@@ -218,7 +232,7 @@ const SubscriptionPlans = () => {
                   Save 30%
                 </motion.div>
               )}
-            </span>
+            </motion.span>
           </motion.div>
         </div>
 
