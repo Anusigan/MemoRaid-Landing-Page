@@ -1,0 +1,541 @@
+.appShowcase {
+  position: relative;
+  padding: 120px 0;
+  background: #ffffff; /* White background */
+  overflow: hidden;
+  color: #0d3445;
+  overflow: hidden;
+  /* Keep other existing styles */
+}
+
+.backgroundAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.backgroundContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 2;
+  z-index: 2;
+  /* Keep other existing styles */
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+  perspective: 1000px;
+}
+
+.sectionHeader h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #0d3445, #3793bf, #0d3445);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientText 8s ease infinite;
+  transform: translateZ(20px);
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.sectionHeader p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(13, 52, 69, 0.8);
+  transform: translateZ(10px);
+}
+
+.appDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  perspective: 2000px;
+}
+
+/* iPhone 16 Pro Max frame with updated design */
+.phoneFrame {
+  position: relative;
+  width: 300px;
+  height: 630px; /* Taller to match iPhone 16 Pro Max proportions */
+  background-color: #1b1c1e; /* Titanium-like color */
+  border-radius: 48px; /* More rounded corners for iPhone 16 design */
+  padding: 8px;
+  box-shadow: 
+    0 25px 45px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(13, 52, 69, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(.23,1,.32,1);
+  transform: rotateY(15deg) rotateX(5deg);
+  animation: phoneFloat 6s ease-in-out infinite;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* iPhone titanium frame effect */
+.phoneFrame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 48px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.05) 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: rotateY(15deg) rotateX(5deg) translateY(0); }
+  50% { transform: rotateY(15deg) rotateX(5deg) translateY(-15px); }
+}
+
+.phoneFrame:hover {
+  transform: rotateY(-20deg) rotateX(10deg) scale(1.05);
+  box-shadow: 
+    0 35px 60px rgba(0, 0, 0, 0.2),
+    0 0 40px rgba(13, 52, 69, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Dynamic Island instead of notch */
+.dynamicIsland {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 35px;
+  background-color: #000;
+  border-radius: 30px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dynamicIsland::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  right: 15px;
+}
+
+.dynamicIsland::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  left: 15px;
+}
+
+.phoneFrame:hover .dynamicIsland {
+  width: 130px;
+  background-color: #111;
+}
+
+.phoneHomeIndicator {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  z-index: 2;
+  transition: all 0.3s;
+}
+
+.phoneFrame:hover .phoneHomeIndicator {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* Enhanced screen slider */
+.screenSlider {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(.19,1,.22,1);
+}
+
+.appScreen {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: scale(0.9);
+}
+
+.appScreen.active {
+  opacity: 1;
+  transform: scale(1);
+  animation: screenPulse 2s ease-in-out infinite;
+}
+
+@keyframes screenPulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.1); }
+}
+
+/* Modern features styling with updated color scheme */
+.appFeatures {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.feature {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.9); /* Whiter background */
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(.19,1,.22,1);
+  border: 1px solid rgba(13, 52, 69, 0.1);
+  backdrop-filter: blur(7px);
+  opacity: 0.8;
+  transform: translateX(30px) perspective(1000px) rotateY(10deg);
+  position: relative;
+  box-shadow: 0 5px 20px rgba(13, 52, 69, 0.05); /* Subtle shadow */
+}
+
+.feature:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(13, 52, 69, 0.15);
+  transform: translateX(20px) perspective(1000px) rotateY(5deg);
+  box-shadow: 0 8px 25px rgba(13, 52, 69, 0.08);
+}
+
+.feature.active {
+  opacity: 1;
+  background: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.95));
+  border: 1px solid rgba(13, 52, 69, 0.2);
+  box-shadow: 
+    0 15px 30px rgba(13, 52, 69, 0.08),
+    0 0 20px rgba(13, 52, 69, 0.05),
+    inset 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: translateX(0) perspective(1000px) rotateY(0deg);
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #0d3445, #3793bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.feature.active h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #0d3445, #3793bf);
+  border-radius: 3px;
+  animation: lineGrow 0.5s forwards;
+}
+
+@keyframes lineGrow {
+  from { width: 0; }
+  to { width: 40px; }
+}
+
+.feature p {
+  font-size: 1rem;
+  color: rgba(13, 52, 69, 0.8);
+  line-height: 1.6;
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background: rgba(13, 52, 69, 0.05);
+  margin-bottom: 15px;
+  border: 1px solid rgba(13, 52, 69, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.featureIcon svg {
+  color: #0d3445;
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+
+.feature:hover .featureIcon svg,
+.feature.active .featureIcon svg {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .appDisplay {
+    gap: 50px;
+  }
+  
+  .phoneFrame {
+    width: 270px;
+    height: 550px;
+  }
+  
+  .appFeatures {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionHeader h2 {
+    font-size: 2.8rem;
+  }
+  
+  .appDisplay {
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .appFeatures {
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 40px;
+  }
+  
+  .feature {
+    transform: translateX(0) perspective(1000px) rotateY(0);
+  }
+}
+
+/* Orbit animations */
+.orbitContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(13, 52, 69, 0.05);
+}
+
+.orbit1 {
+  width: 600px;
+  height: 600px;
+  top: -100px;
+  right: -100px;
+  animation: spin 15s linear infinite;
+}
+
+.orbit2 {
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  left: 15%;
+  animation: spin 10s linear infinite reverse;
+}
+
+.orbit3 {
+  width: 800px;
+  height: 800px;
+  bottom: -200px;
+  left: -200px;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.glow1 {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(13, 52, 69, 0.05) 0%, rgba(13, 52, 69, 0) 70%);
+  animation: pulse 8s ease-in-out infinite alternate;
+}
+
+.glow2 {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  left: 20%;
+  background: radial-gradient(circle, rgba(55, 147, 191, 0.05) 0%, rgba(55, 147, 191, 0) 70%);
+  animation: pulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; transform: scale(0.8); }
+  100% { opacity: 0.8; transform: scale(1.2); }
+}
+
+.particlesContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Shiny reflection effect on phone */
+.reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 33px;
+  transform: translateX(-100%);
+  animation: shine 5s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  20%, 100% { transform: translateX(100%); }
+}
+
+/* Store badges */
+.storeBadges {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.storeBadges p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.storeButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #0d3445;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 5px 15px rgba(13, 52, 69, 0.15);
+}
+
+.storeButton:hover {
+  background: #165370;
+}
+
+.storeIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.storeText {
+  text-align: left;
+}
+
+.storeTextSmall {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.storeTextLarge {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.storeBadge {
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.storeBadge:hover {
+  transform: scale(1.05);
+}

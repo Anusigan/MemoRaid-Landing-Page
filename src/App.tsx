@@ -18,12 +18,12 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      
       <About />
       <Team />
-      <Research />
       <Blog />
       <Testimonials />
-      <MobileApp />
+      
       <Footer />
     </div>
   );

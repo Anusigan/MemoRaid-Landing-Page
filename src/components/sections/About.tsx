@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Target, Users, Briefcase, Clock } from "lucide-react"
+import AppShowcase from "./AppShowcase"
 
 const About = () => {
   const [scrolling, setScrolling] = useState(false)
@@ -65,6 +66,8 @@ const About = () => {
         </div>
       </section>
 
+      <AppShowcase></AppShowcase>
+
       {/* Achievements Section with Enhanced Animation */}
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,6 +125,9 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* App Features Showcase Section - Using the new component */}
+      
     </>
   )
 }
