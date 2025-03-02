@@ -21,10 +21,9 @@ function App() {
       
       <About />
       <Team />
-      <Research />
       <Blog />
       <Testimonials />
-      <MobileApp />
+      
       <Footer />
     </div>
   );
